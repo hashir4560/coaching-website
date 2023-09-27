@@ -2,6 +2,7 @@ import { useLocation, Link } from "react-router-dom";
 
 export default function Breadcrumbs() {
   const location = useLocation();
+  // /help/contact -- > help | contact
 
   let currentLink = "";
 
@@ -21,4 +22,4 @@ export default function Breadcrumbs() {
   return <div className="breadcrumbs">{crumbs}</div>;
 }
 
-// /help/contact -- > help | contact
+
