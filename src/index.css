@@ -3,7 +3,9 @@
 :root {
   --primary: #bc4123;
   --secondary: #2b3452;
+
 }
+
 body {
   margin: 0;
   padding: 20px;
@@ -18,13 +20,48 @@ p {
   margin: 20px 0;
 }
 button {
-  border: 0;
+  border: 15px;
   padding: 8px;
   border-radius: 4px;
   color: white;
   background: var(--primary);
   cursor: pointer;
 }
+.home {
+  padding: 20px; /* Add padding for spacing */
+  border-radius: 10px; /* Rounded corners for the content */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+}
+/* Transition Logic */
+.home h2 {
+  font-size: 24px;
+  color: #26f8ffb8;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid #000;
+  animation: typing 2s steps(40, end), blink-caret 0.5s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 20%;
+  }
+}
+
+
+
+
+p {
+  color: #ffffff; /* Paragraph text color */
+  font-size: 16px; /* Paragraph font size */
+  line-height: 1.5; /* Line spacing between paragraphs */
+  margin-bottom: 12px; /* Spacing below each paragraph */
+}
+
+
 
 /* navbar */
 header nav{
