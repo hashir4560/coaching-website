@@ -16,6 +16,7 @@ import CareerDetails, {
   careerDetailsLoader,
 } from "./pages/careers/CareerDetails";
 import CareersError from "./pages/careers/CareersError";
+import "./index.css";
 
 // layouts
 import RootLayout from "./layouts/RootLayout";

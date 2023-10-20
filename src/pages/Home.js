@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+
 export default function Home() {
   const [text, setText] = useState("");
   const welcomeText = "Welcome to Quantum Learning Academy!";
@@ -38,6 +39,7 @@ export default function Home() {
         goals and excel in your academic and professional endeavors. Your path
         to success starts here!
       </p>
+      {/* Add your images here with meaningful alt text */}
     </div>
   );
 }

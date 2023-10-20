@@ -1,4 +1,11 @@
 import { Form, redirect, useActionData } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faWhatsapp,
+  faInstagram,
+  faFacebook,
+} from "@fortawesome/free-brands-svg-icons";
+import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 
 export default function Contact() {
   const data = useActionData();
@@ -21,6 +28,40 @@ export default function Contact() {
         <button>Submit</button>
         {data && data.error && <p>{data.error}</p>}
       </Form>
+      {/* Add links to LinkedIn, Instagram, Facebook, and WhatsApp */}
+      <div className="social-links">
+        <a
+          href="mailto:quantumlearningacademy299@gmail.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FontAwesomeIcon icon={faEnvelope} />
+          Email
+        </a>
+
+        <a
+          href="https://instagram.com/quantum_learningacademy?igshid=OGQ5ZDc2ODk2ZA=="
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FontAwesomeIcon icon={faInstagram} />
+          Instagram
+        </a>
+        <a
+          href="https://www.facebook.com/profile.php?id=61552548781170&mibextid=ZbWKwL"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FontAwesomeIcon icon={faFacebook} /> Facebook
+        </a>
+        <a
+          href="https://wa.me/923208874814"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FontAwesomeIcon icon={faWhatsapp} /> WhatsApp
+        </a>
+      </div>
     </div>
   );
 }

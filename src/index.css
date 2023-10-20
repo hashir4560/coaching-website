@@ -3,8 +3,22 @@
 :root {
   --primary: #bc4123;
   --secondary: #2b3452;
-
+  position: relative;
 }
+img[alt="QLA logo"] {
+  position: absolute;
+  top: 20px;
+  left: 20px; /* Corrected from 20pox to 20px */
+  z-index: 1;
+}
+
+.personality-image {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+}
+
 
 body {
   margin: 0;
@@ -31,15 +45,17 @@ button {
   padding: 20px; /* Add padding for spacing */
   border-radius: 10px; /* Rounded corners for the content */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+  text-align: center;
 }
 /* Transition Logic */
 .home h2 {
-  font-size: 24px;
+  font-size: 36px;
   color: #26f8ffb8;
   white-space: nowrap;
   overflow: hidden;
   border-right: 2px solid #000;
   animation: typing 2s steps(40, end), blink-caret 0.5s step-end infinite;
+  margin-bottom: 20px;
 }
 
 @keyframes typing {
@@ -56,9 +72,9 @@ button {
 
 p {
   color: #ffffff; /* Paragraph text color */
-  font-size: 16px; /* Paragraph font size */
-  line-height: 1.5; /* Line spacing between paragraphs */
-  margin-bottom: 12px; /* Spacing below each paragraph */
+  font-size: 18px; /* Paragraph font size */
+  line-height: 1.6; /* Line spacing between paragraphs */
+  margin-bottom: 20px; /* Spacing below each paragraph */
 }
 
 
@@ -138,26 +154,51 @@ form label span {
   margin-bottom: 10px;
 }
 
+.contact {
+  /* Your existing styles for the "Contact Us" section */
 
+  /* Add some spacing between the form and social links */
+  margin-top: 20px;
+}
 
-/* careers list */
-.careers > a {
-  display: block;
-  background: rgba(0,0,0,0.2);
-  padding: 20px;
-  border-radius: 4px;
-  margin: 20px 0;
+.social-links {
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* Style the social link icons */
+.social-links a {
+  display: inline-block;
+  color: #fff; /* Set the icon color to white to ensure visibility */
   text-decoration: none;
+  font-size: 20px; /* Adjust the font size as needed */
+  margin-right: 12px; /* Add a small gap between the icon and the name */
 }
-.careers > a:hover p {
-  color: var(--primary);
+
+/* Style the icons individually */
+.social-links a.fa-whatsapp::before {
+  content: "\f232"; /* Use the appropriate Font Awesome Unicode for WhatsApp */
 }
-.careers p {
-  margin: 0;
+
+.social-links a.fa-instagram::before {
+  content: "\f16d"; /* Use the appropriate Font Awesome Unicode for Instagram */
 }
-.careers > a p:last-child {
- font-size: 0.8em;
- color: #bbb;
+
+.social-links a.fa-facebook::before {
+  content: "\f09a"; /* Use the appropriate Font Awesome Unicode for Facebook */
+}
+
+/* Adjust icon colors on hover (optional) */
+.social-links a:hover {
+  color: #0077B5; /* LinkedIn */
+}
+
+.social-links a.fa-instagram:hover::before {
+  color: #bc2a8d; /* Instagram */
+}
+
+.social-links a.fa-facebook:hover::before {
+  color: #1877f2; /* Facebook */
 }
 
 /* careers details */
@@ -186,3 +227,45 @@ form label span {
 .breadcrumbs .crumb a {
   color: #ddd;
 }
+
+
+
+/* Default styles for larger screens (e.g., desktop) */
+
+/* Default styles for larger screens (e.g., desktop) */
+/* Your existing CSS code */
+
+/* Media query for tablets and smaller screens */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+  }
+
+  .logo {
+    text-align: center;
+  }
+
+  .logo-image {
+    width: 100px; /* Adjust the logo size as needed */
+  }
+
+  .logo-heading {
+    font-size: 24px; /* Adjust font size as needed */
+  }
+
+  .nav-links {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .nav-links a {
+    display: block;
+    margin: 10px 0;
+  }
+}
+
+/* Media query for mobile devices */
+@media (max-width: 480px) {
+  /* Add more responsive styles as needed */
+}
+
