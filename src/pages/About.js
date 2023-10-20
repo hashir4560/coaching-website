@@ -3,6 +3,7 @@ import { Navigate } from "react-router-dom";
 import hashir from "../assets/hashir.png";
 import osama from "../assets/osama.png";
 export default function About() {
+  // eslint-disable-next-line
   const [user, setUser] = useState("hashir");
   if (!user) {
     return <Navigate to="/" replace={true} />;
